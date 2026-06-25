@@ -463,10 +463,10 @@ function handleNewsletter() {
 }
 
 function navigate(viewName, param = null, pushHistory = true) {
-    window.scrollTo(0, 0);
-    const contentHtml = views[viewName] ? views[viewName](param) : views['home']();
-    appContent.innerHTML = contentHtml;
-    lucide.createIcons(); // Re-render icons
+    // window.scrollTo(0, 0);
+    // const contentHtml = views[viewName] ? views[viewName](param) : views['home']();
+    // appContent.innerHTML = contentHtml;
+    // lucide.createIcons(); // Re-render icons
     
     if (pushHistory) {
         const url = `#${viewName}${param ? '/' + param : ''}`;
@@ -600,4 +600,4 @@ if (initialHash.startsWith('search/')) {
 } else {
     navigate('home');
 }
-lucide.createIcons();
+// lucide.createIcons();
