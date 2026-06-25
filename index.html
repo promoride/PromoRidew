@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromoRide. - Twój portal z ofertami</title>
+    <meta name="description" content="Najlepsze oferty na sprzęt elektroniczny, hulajnogi, rowery elektryczne, RTV i gry. Znajdź okazje i zarabiaj z nami!">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode"> <!-- Domyślnie Dark Mode jak ustalone -->
+
+    <!-- Nawigacja -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo" data-navigate="home">
+                <i data-lucide="zap" class="logo-icon"></i>
+                <span>PromoRide.</span>
+            </div>
+            <nav class="nav-links">
+                <button data-navigate="home" class="nav-btn">Oferty</button>
+                <button data-navigate="guides" class="nav-btn">Poradniki</button>
+                <button data-navigate="calculator" class="nav-btn">Kalkulator</button>
+
+            </nav>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="icon-btn" aria-label="Przełącz motyw">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Kontener na dynamiczny kontent (SPA) -->
+    <main id="app-content" class="container">
+        <!-- Zawartość wstrzykiwana przez app.js -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>PromoRide.</h3>
+                <p>Twój zaufany agregator najlepszych ofert. Oszczędzaj i zarabiaj.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook" rel="nofollow"><i data-lucide="facebook"></i></a>
+                    <a href="#" aria-label="Twitter" rel="nofollow"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="Instagram" rel="nofollow"><i data-lucide="instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <button data-navigate="terms" class="footer-link">Regulamin</button>
+                <button data-navigate="disclosure" class="footer-link">Oświadczenie Afiliacyjne</button>
+                <button data-navigate="contact" class="footer-link">Kontakt</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PromoRide. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <i data-lucide="cookie" class="cookie-icon"></i>
+            <div>
+                <h4>Szanujemy Twoją prywatność</h4>
+                <p>Używamy plików cookie i narzędzi analitycznych, aby ulepszać naszą stronę i pokazywać Ci lepsze oferty. <a href="#" data-navigate="terms">Dowiedz się więcej</a>.</p>
+            </div>
+        </div>
+        <div class="cookie-actions">
+            <button id="accept-cookies" class="btn btn-primary">Akceptuję</button>
+            <button id="decline-cookies" class="btn btn-secondary">Odrzuć</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
